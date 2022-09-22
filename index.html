@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen2</title>
+    <link rel="stylesheet" href="maquetacion.css">
+    <link rel="stylesheet" href="js.js">
+</head>
+<body>
+    <div class="principal">
+        <nav>
+            <div class="logo">
+                <img src="imagenes/logo1.png" />
+            </div>
+            <div class="menu">
+                <ul>
+                    <li>Inicio</li>
+                    <li>Sobre nosotros</li>
+                    <li>Contacto</li>
+                    <li>Portafolio</li>
+                </ul>
+            </div>
+        </nav>
+        <div id="segundocontenido">
+            <div class="cajita"> 
+                <form name="convertidor">
+                    <h3> Conversor de Dolares a Bolivianos </h3>
+                    <h3>Dólares a convertir: <input type="text" name="Dolar"> </h3>
+                    <h3>Sería un total de: <input type="text" name="bolivianos"> Bs. </h3>
+                    <input type="button" value="convertir" onclick="calcular()">
+                </form>
+                <script>
+                    function calcular()
+                        {
+                            var dol = (document.convertidor.Dolar.value)*1;
+                            var tot = dol * 9.96;
+                            tot = tot.toFixed(2);
+                            document.convertidor.bolivianos.value = tot;
+                        }
+                </script>
+            </div>
+            <div class="cajita">
+                <form name="convertidor1">
+                    <h3> Conversor de Bolivianos a Dolares </h3>
+                    <h3>Dólares a convertir: <input type="text" name="bs"> </h3>
+                    <h3>Sería un total de: <input type="text" name="sus"> Sus. </h3>
+                    <input type="button" value="convertir" onclick="calcular1()">
+                </form>
+                <script>
+                    function calcular1()
+                        {
+                            var bol = (document.convertidor1.bs.value)*1;
+                            var tota = bol * 9.96;
+                            tota = tota.toFixed(2);
+                            document.convertidor1.sus.value = tota;
+                        }
+                </script>
+            </div>
+        </div>
+    </div>
+    <figure>
+        <section class="formulario">
+        <form action="#" target="" method="get" name="formDatosPersonales"class="formu">
+
+            <label for="nombre">NOMBRE y APELLIDO</label><br>
+            <input type="text" name="nombre" id="nombre" placeholder="Escribe tu nombre" /><br>
+        
+            <label for="email" >EMAIL</label><br>
+            <input type="email" name="email" id="email" placeholder="email" required /><br>
+        
+            <label for="asunto">ASUNTO</label><br>
+            <textarea name="mensaje" for="mensaje" placeholder="describe brevemente en menos de 300 carácteres" maxlength="300"></textarea><br>
+
+            <label for="mensaje">TELEFONO</label><br>
+            <input type ="text" name="asunto" id="asunto" placeholder="Escribe su telefono"/><br>
+
+            <input type="submit" name="enviar" value="REGISTRA" onclick="mesaje() "/>
+
+            <Script>   
+            function mesaje()
+            {    
+                var contenido = document.getElementById("nombre").value;
+                window.alert("Bienvena a esta Pagina "+" "+ contenido)
+            }
+             </script>
+
+        </form>
+          
+    </section>
+    </figure>
+    
+        <main>
+           <center> <form>
+                <label for="Name">NOMBRE Y APELLIDO</label> <br>
+                <input type="text" id="Name" name="Name" /><br><br>
+                <button name="button">ACEPTAR</button>
+            </center></form>
+            <center> <div class="logo1">
+              <img src="imagenes/logo1.png" />
+            </div></center>
+        </main>
+        <footer>
+            <div class="caja">
+                INFORMACIÓN DE CONTACTO<br>
+                Dirección <br>
+                Los Yébenes 89 (Madrid)<br>
+                Telefono<br>
+                915 099 877<br>
+                Teléfono Urgencias<br>
+                689 678 246<br>
+                Email<br>
+                info@clinicasalvatierra.com
+            </div>
+            <div class="caja">
+                Para evitar esperas se recomienda pedir CITA PREVIA<br>
+                Calle Ramón y Cajal, 39 – bajo, 16004 Cuenca<br>
+                Teléfono  (24 horas): 969 23 07 06<br>
+                hola@clinicaveterinariazarpa.com<br>
+            </div>
+            <div class="caja">
+                <img src="imagenes/logo1.png" />
+                LA MEJOR
+            </div>
+            <div class="caja">
+                
+                HORARIOS<br>
+                Jueves : 10:00 - 18:00<br>
+                Viernes : 10:00 - 18:00<br>
+                Sábado : Cerrado<br>
+                Domingo : Cerrado<br>
+                Lunes : 10:00 - 18:00<br>
+                Martes : 10:00 - 18:00<br>
+                Miércoles : 10:00 - 18:00<br>
+            </div>
+           
+        </footer>
+    </div>
+</body>
+</html>
